@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="quiz"
+            type="com.example.quiz.QuizGameFragment" />
+    </data>
+
+
+    <LinearLayout
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/ImageStyle"
+        android:src="@drawable/quiz_logo">
+    </ImageView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/MediumTextStyle"
+        tools:text="Which is the Independence day of Bangladesh?"
+        android:text="@{quiz.currentQuestion.theQuestion}"/>
+
+
+    <ScrollView android:layout_height="0dp" android:layout_width="match_parent" android:layout_weight="1">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/AnswerTextStyle"
+        tools:text="Option1"
+        android:id="@+id/option1"
+        android:text="@{quiz.answers[0]}"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/AnswerTextStyle"
+        tools:text="Option1"
+        android:id="@+id/option2"
+        android:text="@{quiz.answers[1]}"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/AnswerTextStyle"
+        tools:text="Option1"
+        android:id="@+id/option3"
+        android:text="@{quiz.answers[2]}"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/AnswerTextStyle" tools:text="Option1"
+        android:id="@+id/option4"
+        android:text="@{quiz.answers[3]}"/>
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
+
+</layout>

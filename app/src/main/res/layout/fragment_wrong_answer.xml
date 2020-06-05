@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="quizlost"
+            type="com.example.quiz.QuizLostFragment" />
+    </data>
+
+
+    <ScrollView android:layout_height="wrap_content" android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        style="@style/ImageStyle"
+        android:src="@drawable/wronganswer"> </ImageView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Your Score"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal">
+    </TextView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/ScoreStyle"
+        tools:text="100"
+        android:id="@+id/txt_score"
+        android:text="@{quizlost.earnedScore}">
+       </TextView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Your wrong answers - "
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/yourwronganswer"
+        android:visibility="gone"> </TextView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/WrongAnswersStyle"
+        tools:text="this is a wrong answer"
+        android:id="@+id/txt_wrong_answer"
+        android:visibility="gone"
+        android:text="@{quizlost.wrongAswerText}">
+    </TextView>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/ButtonStyle"
+        android:text="Try Again"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/btn_try_again"> </Button>
+
+</LinearLayout>
+
+</ScrollView>
+
+</layout>
